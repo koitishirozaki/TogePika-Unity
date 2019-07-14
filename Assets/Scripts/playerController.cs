@@ -12,8 +12,8 @@ public class playerController : MonoBehaviour
     public bool itsAlive = true;
     public int combo = 0;
     public int pontos = 0;
-    public Text pointsLabel;
-    public Text comboLabel;
+    //public Text pointsLabel;
+    // public Text comboLabel;
 
     public Transform groundCheckTransform;
     private bool isGrounded;
@@ -130,9 +130,9 @@ public class playerController : MonoBehaviour
                         isJump = false;
                         jumpTimeCounter = jumpTime;
                         combo += 1;
-                        comboLabel.text= "Combo: " + combo.ToString();
+                        //comboLabel.text= "Combo: " + combo.ToString();
                         pontos += combo;
-                        pointsLabel.text = "Points: " + pontos.ToString();
+                        //pointsLabel.text = "Points: " + pontos.ToString();
                     }
                     gotKill = true;
                     canAttack = true;
@@ -146,15 +146,15 @@ public class playerController : MonoBehaviour
             }
             
             pontos += Mathf.RoundToInt( 25*Time.deltaTime);
-            pointsLabel.text = "Points: " + pontos.ToString();
-            
-            Debug.Log(pontos);
+            //pointsLabel.text = "Points: " + pontos.ToString();
+
+            //Debug.Log(pontos);
             UpdateGroundedStatus();
 
         }
         else
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("PikaTsu");
         }
 
 
@@ -173,7 +173,7 @@ public class playerController : MonoBehaviour
         grounded = Physics2D.OverlapCircle(groundCheckTransform.position, 0.1f, groundCheckLayerMask);
         if(grounded){
             combo = 0;
-            comboLabel.text= "Combo: " + combo.ToString();
+            //comboLabel.text= "Combo: " + combo.ToString();
         }
     }
     void OnTriggerEnter2D(Collider2D collider)

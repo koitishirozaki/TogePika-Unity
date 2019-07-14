@@ -100,11 +100,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3345981713361614296}
     m_Modifications:
-    - target: {fileID: 7168878940732772222, guid: d481710e88e88dc45970af1f40497e85,
-        type: 3}
-      propertyPath: m_Name
-      value: enemy_sprite
-      objectReference: {fileID: 0}
     - target: {fileID: 7168878940732772221, guid: d481710e88e88dc45970af1f40497e85,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -175,6 +170,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.097343996
       objectReference: {fileID: 0}
+    - target: {fileID: 7168878940732772222, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_Name
+      value: enemy_sprite
+      objectReference: {fileID: 0}
     - target: {fileID: 7168878940732772223, guid: d481710e88e88dc45970af1f40497e85,
         type: 3}
       propertyPath: dirty
@@ -204,6 +204,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940732772220, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: _sortingLayerName
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940974529094, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 279055875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940974529094, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940992922394, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 279055875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940992922394, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878941075995286, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 279055875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878941075995286, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d481710e88e88dc45970af1f40497e85, type: 3}
