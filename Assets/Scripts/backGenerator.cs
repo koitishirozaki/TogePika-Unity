@@ -87,9 +87,10 @@ public class backGenerator : MonoBehaviour
         while (true)
         {
             GenerateRoomIfRequired();
+
             GenerateObjectsIfRequired();
 
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
@@ -109,8 +110,8 @@ public class backGenerator : MonoBehaviour
     
     float playerX = transform.position.x;
     float removeObjectsX = playerX - screenWidthInPoints;
-    float addObjectX = playerX + screenWidthInPoints*0.4f;
-        float farthestObjectX = addObjectX*0.8f;
+    float addObjectX = playerX + screenWidthInPoints*0.8f;
+        float farthestObjectX = addObjectX*0.9f;
     
     List<GameObject> objectsToRemove = new List<GameObject>();
     foreach (var obj in objects)
