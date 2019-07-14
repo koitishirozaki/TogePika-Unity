@@ -282,7 +282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177658770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.23, y: 0.58, z: -10}
+  m_LocalPosition: {x: 7.73, y: 0.58, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 325405030}
@@ -446,6 +446,9 @@ MonoBehaviour:
   whatEnemies:
     serializedVersion: 2
     m_Bits: 256
+  whatGround:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!50 &408706194
 Rigidbody2D:
   serializedVersion: 4
@@ -494,7 +497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408706192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalPosition: {x: 4.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1578126686}
@@ -518,7 +521,8 @@ MonoBehaviour:
   availableRooms:
   - {fileID: 6983399227922943831, guid: e219bcf7d1814014e970b66872411ffc, type: 3}
   - {fileID: 8839522728295061790, guid: d2858f4f7ea7e89409e14805f9a64f50, type: 3}
-  currentRooms: []
+  currentRooms:
+  - {fileID: 0}
   availableObjects:
   - {fileID: 3345981713240903138, guid: 91806b81ed348f848a4ad0540aeaf143, type: 3}
   - {fileID: 5374086455482892770, guid: c09aa52b86fc77246b1c17df6ce81d15, type: 3}
@@ -620,7 +624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.23, y: 0.58, z: -10}
+  m_LocalPosition: {x: 7.73, y: 0.58, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1324,6 +1328,11 @@ PrefabInstance:
       propertyPath: attackRadius
       value: 1.75
       objectReference: {fileID: 0}
+    - target: {fileID: 7453415791640539394, guid: 43e131c89a8335a41989bc7f23fdfd71,
+        type: 3}
+      propertyPath: whatGround.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 7453415791640539392, guid: 43e131c89a8335a41989bc7f23fdfd71,
         type: 3}
       propertyPath: m_Offset.y
@@ -1332,7 +1341,7 @@ PrefabInstance:
     - target: {fileID: 7453415791640539398, guid: 43e131c89a8335a41989bc7f23fdfd71,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 7453415791640539398, guid: 43e131c89a8335a41989bc7f23fdfd71,
         type: 3}
@@ -1392,7 +1401,7 @@ PrefabInstance:
     - target: {fileID: 7453415791640539397, guid: 43e131c89a8335a41989bc7f23fdfd71,
         type: 3}
       propertyPath: currentRooms.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7453415791640539397, guid: 43e131c89a8335a41989bc7f23fdfd71,
         type: 3}

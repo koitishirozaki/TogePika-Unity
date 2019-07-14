@@ -42,9 +42,11 @@ public class playerController : MonoBehaviour
     public float dashSpeed = 20;
     public float attackRadius = 1;
 
+    public RaycastHit2D ray;
+
     public Transform attackPos;
     public LayerMask whatEnemies;
-
+    public LayerMask whatGround;
 
 
 
@@ -149,6 +151,8 @@ public class playerController : MonoBehaviour
             //pointsLabel.text = "Points: " + pontos.ToString();
 
             //Debug.Log(pontos);
+
+
             UpdateGroundedStatus();
 
         }
@@ -171,10 +175,23 @@ public class playerController : MonoBehaviour
     void UpdateGroundedStatus()
     {
         grounded = Physics2D.OverlapCircle(groundCheckTransform.position, 0.1f, groundCheckLayerMask);
-        if(grounded){
+        if (grounded) {
             combo = 0;
             //comboLabel.text= "Combo: " + combo.ToString();
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 9f, whatGround);
+            if (hit)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation, 10f * Time.deltaTime);
+
+            }
+        } else {
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(transform.up, Vector2.up) * transform.rotation, 10f * Time.deltaTime);
         }
+
+
+
+
+
     }
     void OnTriggerEnter2D(Collider2D collider)
     {

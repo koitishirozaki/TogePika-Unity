@@ -99,7 +99,7 @@ public class backGenerator : MonoBehaviour
         int randomIndex = Random.Range(0, availableObjects.Length);
         GameObject obj = (GameObject)Instantiate(availableObjects[randomIndex]);
         float objectPositionX = lastObjectX + Random.Range(objectsMinDistance, objectsMaxDistance);
-        float randomY = Random.Range(objectsMinY, objectsMaxY);
+        float randomY = Random.Range(transform.position.y - objectsMinY, transform.position.y + objectsMaxY);
         obj.transform.position = new Vector3(objectPositionX, randomY, 0);
         objects.Add(obj);
     }
@@ -109,8 +109,8 @@ public class backGenerator : MonoBehaviour
     
     float playerX = transform.position.x;
     float removeObjectsX = playerX - screenWidthInPoints;
-    float addObjectX = playerX + screenWidthInPoints;
-    float farthestObjectX = 0;
+    float addObjectX = playerX + screenWidthInPoints*0.4f;
+        float farthestObjectX = addObjectX*0.8f;
     
     List<GameObject> objectsToRemove = new List<GameObject>();
     foreach (var obj in objects)
