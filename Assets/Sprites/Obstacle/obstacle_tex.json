@@ -1,0 +1,1 @@
+{"SubTexture":[{"width":342,"y":343,"height":340,"name":"right","x":404},{"width":342,"y":1,"height":340,"name":"left","x":404},{"width":454,"y":685,"height":184,"name":"dow","x":1},{"width":401,"y":1,"height":367,"name":"core","x":1}],"width":1024,"height":1024,"name":"obstacle","imagePath":"obstacle_tex.png"}

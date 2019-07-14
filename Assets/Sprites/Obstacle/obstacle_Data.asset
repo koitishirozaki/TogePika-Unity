@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a64e5b0e436d4bed9780211ae245f7b, type: 3}
+  m_Name: obstacle_Data
+  m_EditorClassIdentifier: 
+  dataName: obstacle
+  dragonBonesJSON: {fileID: 4900000, guid: 3d6c52ed677b6c841ae6938c89476094, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: ea8e1e4598cc25d4ca87e34541c70089, type: 3}
+    texture: {fileID: 2800000, guid: 0c56675c7d215644da60dd68d10c2f98, type: 3}
+    material: {fileID: 2100000, guid: 29fd408201357f94c9685f5c0e52284c, type: 2}
+    uiMaterial: {fileID: 0}
