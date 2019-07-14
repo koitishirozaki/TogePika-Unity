@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DragonBones;
 
 public class playerController : MonoBehaviour
 {
@@ -14,11 +15,12 @@ public class playerController : MonoBehaviour
     public int pontos = 0;
     public Text pointsLabel;
     public Text comboLabel;
-
-    public Transform groundCheckTransform;
+	
+    public UnityEngine.Transform groundCheckTransform;
     private bool isGrounded;
     public LayerMask groundCheckLayerMask;
-
+	public UnityArmatureComponent anim;
+	
     public bool grounded;
     public bool toJump;
     public bool toDash;
@@ -42,7 +44,7 @@ public class playerController : MonoBehaviour
     public float dashSpeed = 20;
     public float attackRadius = 1;
 
-    public Transform attackPos;
+    public UnityEngine.Transform attackPos;
     public LayerMask whatEnemies;
 
 
@@ -54,8 +56,7 @@ public class playerController : MonoBehaviour
     {
         coll = GetComponent<Collision>();
         rigidB = GetComponent<Rigidbody2D>();
-        
-
+		anim = GetComponent<UnityArmatureComponent>();
     }
 
     // Update is called once per frame
@@ -70,8 +71,6 @@ public class playerController : MonoBehaviour
             Vector2 newVelocity = rigidB.velocity;
             newVelocity.x = speed;
             rigidB.velocity = newVelocity;
-            
-
 
             //Jump
             if ((grounded || gotKill) && Input.GetKeyDown(KeyCode.Space))
@@ -83,7 +82,11 @@ public class playerController : MonoBehaviour
                 Vector2 jumpVelocity = rigidB.velocity;
                 jumpVelocity.y = 1 * jumpForce;
                 rigidB.velocity = jumpVelocity;
-            }
+
+				anim.animation.FadeIn ("jump", 0.05f, -1);
+            
+			
+			}
 
             if (Input.GetKey(KeyCode.Space) && isJump == true)
             {

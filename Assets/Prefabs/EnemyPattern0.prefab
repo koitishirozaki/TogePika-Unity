@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c74334eff44bb46b1368db929fc3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyCollider: {fileID: 3345981713361614294}
+  EnemyCollider: {fileID: 0}
 --- !u!1001 &9117991187617094210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103,7 +103,17 @@ PrefabInstance:
     - target: {fileID: 7168878940732772222, guid: d481710e88e88dc45970af1f40497e85,
         type: 3}
       propertyPath: m_Name
-      value: enemy_sprite
+      value: Armature
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940732772222, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940732772222, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7168878940732772221, guid: d481710e88e88dc45970af1f40497e85,
         type: 3}
@@ -177,33 +187,73 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7168878940732772223, guid: d481710e88e88dc45970af1f40497e85,
         type: 3}
-      propertyPath: dirty
+      propertyPath: slotNames.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940732772220, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: _timeScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940732772220, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: _sortingLayerName
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940992922399, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940974529115, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7168878940974529115, guid: d481710e88e88dc45970af1f40497e85,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878941075995243, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7168878941075995243, guid: d481710e88e88dc45970af1f40497e85,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7168878940974529113, guid: d481710e88e88dc45970af1f40497e85,
+    - target: {fileID: 7168878940992922394, guid: d481710e88e88dc45970af1f40497e85,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_SortingLayerID
+      value: 279055875
       objectReference: {fileID: 0}
-    - target: {fileID: 7168878940992922397, guid: d481710e88e88dc45970af1f40497e85,
+    - target: {fileID: 7168878940992922394, guid: d481710e88e88dc45970af1f40497e85,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_SortingLayer
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 7168878941075995241, guid: d481710e88e88dc45970af1f40497e85,
+    - target: {fileID: 7168878940974529094, guid: d481710e88e88dc45970af1f40497e85,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_SortingLayerID
+      value: 279055875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878940974529094, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878941075995286, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 279055875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168878941075995286, guid: d481710e88e88dc45970af1f40497e85,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d481710e88e88dc45970af1f40497e85, type: 3}
