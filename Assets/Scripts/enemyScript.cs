@@ -19,7 +19,7 @@ public class enemyScript : MonoBehaviour
     }
 
     public void takeDamage(){
-        Debug.Log("DANO");
+        //Debug.Log("DANO");
         Destroy(gameObject);
 
     }
