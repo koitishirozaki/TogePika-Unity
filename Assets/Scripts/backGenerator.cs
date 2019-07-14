@@ -22,7 +22,8 @@ public class backGenerator : MonoBehaviour
     void Start()
     {
         float height = 2.0f * Camera.main.orthographicSize;
-        screenWidthInPoints = 166;
+        screenWidthInPoints = height * Camera.main.aspect;
+
         StartCoroutine(GeneratorCheck());
 
 
@@ -40,7 +41,6 @@ public class backGenerator : MonoBehaviour
         int randomRoomIndex = Random.Range(0, availableRooms.Length);
         GameObject room = (GameObject)Instantiate(availableRooms[randomRoomIndex]);        
         float roomWidth = room.transform.Find("Ground").localScale.x;
-        Debug.Log(roomWidth);
         float roomCenter = farthestRoomEndX + roomWidth * 0.5f;       
         room.transform.position = new Vector3(roomCenter, 0, 0);
         currentRooms.Add(room);
@@ -52,14 +52,16 @@ public class backGenerator : MonoBehaviour
         List<GameObject> roomsToRemove = new List<GameObject>();
         bool addRooms = true;
         float playerX = transform.position.x;
+        //Debug.Log("Pos " + playerX);
         float removeRoomX = playerX - screenWidthInPoints;
         float addRoomX = playerX + screenWidthInPoints;
         float farthestRoomEndX = 0;
         foreach (var room in currentRooms)
         {
             float roomWidth = room.transform.Find("Ground").localScale.x;
-            float roomStartX = room.transform.position.x - (roomWidth * 0.5f);
-            float roomEndX = roomStartX + roomWidth;
+            float roomStartX = room.transform.position.x ;
+            Debug.Log("roomStartX" + roomStartX);
+            float roomEndX = roomStartX + 166f;
             if (roomStartX > addRoomX)
             {
                 addRooms = false;

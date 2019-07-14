@@ -136,7 +136,7 @@ public class playerController : MonoBehaviour
                     }
                     gotKill = true;
                     canAttack = true;
-                    Debug.Log("Attakc");
+                    //Debug.Log("Attakc");
                 }
 
                 timeAttack -= Time.deltaTime;
