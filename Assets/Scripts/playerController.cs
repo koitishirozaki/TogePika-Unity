@@ -158,7 +158,7 @@ public class playerController : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("PikaTsu");
+            this.gameObject.SetActive(false);
         }
 
 
